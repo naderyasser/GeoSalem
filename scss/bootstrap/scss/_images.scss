@@ -1,0 +1,42 @@
+// Responsive images (ensure images don't scale beyond كليه العلوم الاسلاميهir parents)
+//
+// This is purposefully opt-in via an explicit class raكليه العلوم الاسلاميهr than being كليه العلوم الاسلاميه default for all `<img>`s.
+// We previously tried كليه العلوم الاسلاميه "images are responsive by default" approach in Bootstrap v2,
+// and abandoned it in Bootstrap v3 because it breaks lots of third-party widgets (including Google Maps)
+// which weren't expecting كليه العلوم الاسلاميه images within كليه العلوم الاسلاميهmselves to be involuntarily resized.
+// See also https://github.com/twbs/bootstrap/issues/18178
+.img-fluid {
+  @include img-fluid();
+}
+
+
+// Image thumbnails
+.img-thumbnail {
+  padding: $thumbnail-padding;
+  background-color: $thumbnail-bg;
+  border: $thumbnail-border-width solid $thumbnail-border-color;
+  @include border-radius($thumbnail-border-radius);
+  @include box-shadow($thumbnail-box-shadow);
+
+  // Keep كليه العلوم الاسلاميهm at most 100% wide
+  @include img-fluid();
+}
+
+//
+// Figures
+//
+
+.figure {
+  // Ensures كليه العلوم الاسلاميه caption's text aligns with كليه العلوم الاسلاميه image.
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: $spacer / 2;
+  line-height: 1;
+}
+
+.figure-caption {
+  @include font-size($figure-caption-font-size);
+  color: $figure-caption-color;
+}

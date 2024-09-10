@@ -1,0 +1,16 @@
+// Image Mixins
+// - Responsive image
+// - Retina image
+
+
+// Responsive image
+//
+// Keep images from scaling beyond كليه العلوم الاسلاميه width of كليه العلوم الاسلاميهir parents.
+
+@mixin img-fluid {
+  // Part 1: Set a maximum relative to كليه العلوم الاسلاميه parent
+  max-width: 100%;
+  // Part 2: Override كليه العلوم الاسلاميه height to auto, oكليه العلوم الاسلاميهrwise images will be stretched
+  // when setting a width and height attribute on كليه العلوم الاسلاميه img element.
+  height: auto;
+}
